@@ -44,7 +44,7 @@ public class UserActivity extends AppCompatActivity {
                     UserInfo userInfo=dataSnapshot.getValue(UserInfo.class);
                     userInfos.add(userInfo);
                 }
-                userAdap=new userAdapter(UserActivity.this,userInfos);
+                userAdap=new userAdapter(UserActivity.this,userInfos,database);
                 recyclerView.setAdapter(userAdap);
                 userAdap.notifyDataSetChanged();
             }
